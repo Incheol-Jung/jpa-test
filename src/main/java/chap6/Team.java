@@ -19,7 +19,11 @@ public class Team {
 
     private String name;
 
-    @OneToMany
-    @JoinColumn
+    @OneToMany(mappedBy="member")
+//    @JoinColumn(name = "ID")
     private List<Member> members = new ArrayList<Member>();
+
+    public Team(String name) {
+        this.name = name;
+    }
 }
