@@ -2,11 +2,13 @@ package chap6;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 /**
@@ -15,14 +17,15 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@NoArgsConstructor
 class Member {
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
 
-    @ManyToOne
-//    @JoinColumn
-    private Team team;
+//    @ManyToOne
+//    @JoinColumn(name = "TEAM_ID" , insertable = false, updatable = false)
+//    private Team team;
 
     public Member(String name) {
         this.name = name;

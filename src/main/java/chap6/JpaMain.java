@@ -1,5 +1,8 @@
 package chap6;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -19,10 +22,11 @@ public class JpaMain {
         Member member1 = new Member("incheol");
         entityManager.persist(member1);
 
-        Team team1 = new Team("team1");
-        entityManager.persist(team1);
+//        Team team1 = new Team("team1");
+//        entityManager.persist(team1);
 
-        member1.setTeam(team1);
+        Team team2 = entityManager.find(Team.class, 1L);
+        team2.getMembers().add(member1);
 
         tx.commit();
         entityManager.close();

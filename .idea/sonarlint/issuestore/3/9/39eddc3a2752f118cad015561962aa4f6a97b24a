@@ -1,4 +1,3 @@
 
-V
-squid:S106"9Replace this use of System.out or System.err by a logger.(£ÆÏÁ8½´ÎõŸ.
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(©ˆåç
+ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(©ˆåç8ÙÈçøŸ.
+isquid:CommentedOutCodeLine!"<This block of commented-out lines of code should be removed.(¬Ñþ¯8í¥ .
