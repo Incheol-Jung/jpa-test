@@ -10,7 +10,11 @@ import javax.persistence.*;
 @DiscriminatorColumn(name = "DTYPE") // 부모 클래스에 구분 컬럼을 지정한다.
 @Getter
 @Setter
-public class Item {
+@SequenceGenerator(
+    name = "test",
+    allocationSize = 50
+)
+public abstract class Item {
 
     @Id @GeneratedValue
     @Column(name = "ITEM_ID")
